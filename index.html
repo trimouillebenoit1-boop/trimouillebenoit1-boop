@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="E-MOTO — maquette de boutique de motos électriques et d'accessoires tout-terrain.">
+  <title>E-MOTO — Boutique électrique</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="announcement">E-MOTO · L'aventure électrique commence ici</div>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="E-MOTO accueil"><span class="brand-mark">ϟ</span><span>E-MOTO<small>PURE ELECTRIC POWER</small></span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu">☰</button>
+    <nav id="nav">
+      <a href="#accueil">Accueil</a><a href="#boutique">Boutique</a><a href="#engagements">Nos engagements</a><a href="#contact">Contact</a>
+    </nav>
+    <button class="cart-button" id="cartOpen" aria-label="Ouvrir le panier">Panier <span id="cartCount">0</span></button>
+  </header>
+
+  <main>
+    <section class="hero" id="accueil">
+      <div class="hero-copy">
+        <p class="eyebrow">MOBILITÉ ÉLECTRIQUE · TOUT-TERRAIN</p>
+        <h1>La puissance<br><span>change de terrain.</span></h1>
+        <p>Explore une sélection de motos électriques et d'accessoires pour les passionnés de chemins, de technique et d'aventure.</p>
+        <a class="button button-red" href="#boutique">Explorer la boutique <span>→</span></a>
+        <div class="hero-stats"><div><b>ÉLECTRIQUE</b><small>Mobilité sans essence à l'usage</small></div><div><b>ÉQUIPEMENT</b><small>Accessoires sélectionnés</small></div></div>
+      </div>
+      <div class="hero-art" role="img" aria-label="Illustration abstraite d'un paysage de montagne"></div>
+    </section>
+
+    <section class="notice">
+      <strong>Démo de boutique — aucune vente n'est activée.</strong>
+      Les modèles, prix et caractéristiques ci-dessous sont des exemples fictifs à remplacer après vérification auprès de fournisseurs fiables.
+    </section>
+
+    <section class="section" id="boutique">
+      <div class="section-heading"><div><p class="eyebrow">LA SÉLECTION E-MOTO</p><h2>La boutique</h2></div><p>Une sélection de démonstration pour présenter l'univers de la marque.</p></div>
+      <div class="filters">
+        <input id="search" type="search" placeholder="Rechercher un produit…" aria-label="Rechercher un produit">
+        <select id="category" aria-label="Filtrer par catégorie"><option value="all">Toutes les catégories</option><option value="moto">Motos électriques</option><option value="equipement">Équipements</option><option value="accessoire">Accessoires</option></select>
+        <select id="sort" aria-label="Trier les produits"><option value="featured">Sélection</option><option value="low">Prix croissant</option><option value="high">Prix décroissant</option></select>
+      </div>
+      <div class="product-grid" id="productGrid"></div>
+    </section>
+
+    <section class="feature-band" id="engagements">
+      <div><span class="feature-icon">↗</span><h3>Infos transparentes</h3><p>Caractéristiques et conditions à confirmer avant toute vente.</p></div>
+      <div><span class="feature-icon">◇</span><h3>Choix responsable</h3><p>Vérification de la conformité et de l'usage prévu de chaque produit.</p></div>
+      <div><span class="feature-icon">⌁</span><h3>Support client</h3><p>Des informations claires sur la livraison, les retours et la garantie.</p></div>
+    </section>
+
+    <section class="section about">
+      <div><p class="eyebrow">NOTRE UNIVERS</p><h2>Électrique.<br>Technique. Libre.</h2></div>
+      <div><p>E-MOTO est un concept de boutique dédié à la mobilité électrique tout-terrain et aux équipements associés. Notre priorité : aider les clients à comparer les produits avec des informations précises et vérifiées.</p><a href="#contact" class="text-link">Une question ? Contacte-nous →</a></div>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <div><p class="eyebrow">ON RESTE EN CONTACT</p><h2>Parlons de ton projet.</h2><p>Ce formulaire est une maquette : il n'envoie pas de message.</p></div>
+      <form id="contactForm"><label>Nom<input required placeholder="Ton nom"></label><label>Email<input type="email" required placeholder="toi@exemple.fr"></label><label>Message<textarea required rows="4" placeholder="Comment pouvons-nous aider ?"></textarea></label><button class="button button-red" type="submit">Envoyer (démo)</button><p class="form-feedback" id="contactFeedback" aria-live="polite"></p></form>
+    </section>
+  </main>
+
+  <footer><a class="brand" href="#"><span class="brand-mark">ϟ</span><span>E-MOTO<small>PURE ELECTRIC POWER</small></span></a><p>© <span id="year"></span> E-MOTO · Maquette de démonstration</p><p class="footer-small">Avant toute mise en vente : vérifier statut légal, conformité, sécurité, assurance, livraison, retours, fiscalité et obligations du vendeur.</p></footer>
+
+  <div class="cart-backdrop" id="cartBackdrop"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Panier">
+    <div class="cart-head"><h2>Ton panier</h2><button id="cartClose" aria-label="Fermer le panier">✕</button></div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-bottom"><div class="cart-total"><span>Total indicatif</span><strong id="cartTotal">0,00 €</strong></div><button class="button button-red full" id="checkout">Continuer (démo)</button><p class="cart-note" id="checkoutNote">Aucun paiement ni commande réelle n'est possible dans cette maquette.</p></div>
+  </aside>
+  <script src="app.js"></script>
+</body>
+</html>
